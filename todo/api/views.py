@@ -33,6 +33,7 @@ def task_list(request):
         for task in tasks:
             types.append(str(task.get_pk()))
         return Response("         ".join(types))
+
         
 @api_view(['GET', 'PUT', 'DELETE'])
 def task_detail(request, pk):
